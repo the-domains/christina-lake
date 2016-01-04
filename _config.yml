@@ -1,7 +1,7 @@
 name: Christina Lake
 favicon: null
-layout_spectrum: 0.73237
-typography_spectrum: 0.74865
+layout_spectrum: 1
+typography_spectrum: 0.085
 cta:
   domain: null
   bucket: null
@@ -22,7 +22,7 @@ color:
     - '#00ffff'
     - '#00ff00'
   brandStrength: 0.1875
-  lightness: 0.6875
+  lightness: 1
   saturation: 0.25
   rhythmicContrast: 1
 purpose: []
