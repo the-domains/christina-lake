@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>TCT - Santa Rosa to Cascade - Christina Lake</title><link href="../rss.xml" title="Christina Lake feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="b40ac70a-0f27-4e26-9871-3c99e1cd2727"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>TCT - Santa Rosa to Cascade - Christina Lake</title><link href="../rss.xml" title="Christina Lake feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.17"><meta name="the-grid-solution" content="ae9bab0e-7519-45c9-ba19-6224759e7c13"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -203,13 +203,6 @@ body {
 .stack {
   z-index: 1;
   transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-}
-.group,
-.aside,
-.decoration {
-  transition: transform 0.3s ease-out;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -270,10 +263,6 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
-.media iframe {
-  transition: 0.3s opacity ease-in;
-  -webkit-transition: 0.3s opacity ease-in;
-}
 h1 a,
 h2 a,
 h3 a {
@@ -294,15 +283,11 @@ a {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.text li {
-  margin-left: 1.5em;
-}
 .decoration {
   pointer-events: none;
 }
 .svg {
   position: relative;
-  background-color: currentColor;
 }
 .svg > svg {
   position: absolute;
@@ -328,6 +313,9 @@ a {
 .svg polyline {
   stroke: currentColor;
 }
+.decoration {
+  background-color: currentColor;
+}
 .svg {
   background-color: transparent;
 }
@@ -343,12 +331,39 @@ a {
   background-color: currentColor;
   content: "";
 }
-.colors-style-aside-border .publisher,
-.colors-style-aside-border .author {
-  padding: .4vw .6vw;
+.revealed,
+.revealed > * {
+  pointer-events: none;
 }
-.cover_only_header:first-of-type {
-  position: fixed;
+.revealed .aside,
+.revealed a {
+  pointer-events: all;
+}
+.revealed {
+  background-image: none !important;
+  background-color: none !important;
+}
+.stack,
+.group,
+.aside,
+.decoration,
+.media,
+html body a.media,
+.media img,
+.media picture,
+iframe {
+  min-width: 0;
+  min-height: 0;
+  transition-duration: .3s;
+  transition-property: transform, color, background-color, opacity, clip, z-index, border-width;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: -webkit-transform, color, background-color, opacity, clip, z-index, border-width;
+  -webkit-transition-timing-function: ease-out;
+}
+.media img {
+  transition-property: transform, color, background-color;
+  -webkit-transition-property: -webkit-transform, color, background-color;
 }
 .decoration {
   z-index: 3;
@@ -361,7 +376,7 @@ ul {
 }
 .panel .heading {
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 1px;
 }
 .listing:not(.open) .shadow-overlay {
   pointer-events: none;
@@ -376,17 +391,6 @@ ul {
 .group .text,
 .group .aside {
   z-index: 2;
-}
-.group button {
-  border-radius: 3px;
-  padding: 15px 25px;
-  margin-top: 36px;
-}
-.group button:hover {
-  opacity: .8;
-}
-.group .attribution {
-  overflow: hidden;
 }
 .group .attribution:after {
   display: block;
@@ -459,6 +463,7 @@ ul {
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 4.324rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading { background-color: rgb(243, 241, 241); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:active { color: rgb(0, 0, 0); }
@@ -490,6 +495,7 @@ ul {
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .decoration.separator { color: rgb(248, 179, 0); }
+#u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a { color: rgb(127, 110, 84); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:hover { color: rgb(0, 0, 0); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:active { color: rgb(0, 0, 0); }
@@ -511,6 +517,7 @@ ul {
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed { background-color: rgb(242, 242, 242); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a { color: rgb(127, 110, 84); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:hover { color: rgb(0, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:active { color: rgb(0, 0, 0); }
@@ -531,6 +538,7 @@ ul {
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a { color: rgb(127, 110, 84); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:hover { color: rgb(0, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:active { color: rgb(0, 0, 0); }
@@ -543,6 +551,7 @@ ul {
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph { color: rgb(5, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column { background-color: rgb(242, 242, 242); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a { color: rgb(127, 110, 84); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:hover { color: rgb(0, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:active { color: rgb(0, 0, 0); }
@@ -557,6 +566,7 @@ ul {
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 3.844rem; position: absolute; top: 0rem; left: 0.124rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading { background-color: rgb(240, 242, 245); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:active { color: rgb(0, 0, 0); }
@@ -589,6 +599,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 6.484rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading { background-color: rgb(243, 241, 241); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:active { color: rgb(0, 0, 0); }
@@ -620,6 +631,7 @@ display: none;
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .decoration.separator { color: rgb(248, 179, 0); }
+#u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a { color: rgb(127, 110, 84); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:hover { color: rgb(0, 0, 0); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:active { color: rgb(0, 0, 0); }
@@ -641,6 +653,7 @@ display: none;
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed { background-color: rgb(242, 242, 242); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a { color: rgb(127, 110, 84); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:hover { color: rgb(0, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:active { color: rgb(0, 0, 0); }
@@ -661,6 +674,7 @@ display: none;
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a { color: rgb(127, 110, 84); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:hover { color: rgb(0, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:active { color: rgb(0, 0, 0); }
@@ -673,6 +687,7 @@ display: none;
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph { color: rgb(5, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column { background-color: rgb(242, 242, 242); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a { color: rgb(127, 110, 84); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:hover { color: rgb(0, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:active { color: rgb(0, 0, 0); }
@@ -687,6 +702,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 5.764rem; position: absolute; top: 0rem; left: 0.184rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading { background-color: rgb(240, 242, 245); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:active { color: rgb(0, 0, 0); }
@@ -719,6 +735,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 8.644rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading { background-color: rgb(243, 241, 241); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:active { color: rgb(0, 0, 0); }
@@ -750,6 +767,7 @@ display: none;
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .decoration.separator { color: rgb(248, 179, 0); }
+#u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a { color: rgb(127, 110, 84); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:hover { color: rgb(0, 0, 0); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:active { color: rgb(0, 0, 0); }
@@ -771,6 +789,7 @@ display: none;
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed { background-color: rgb(242, 242, 242); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a { color: rgb(127, 110, 84); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:hover { color: rgb(0, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:active { color: rgb(0, 0, 0); }
@@ -791,6 +810,7 @@ display: none;
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a { color: rgb(127, 110, 84); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:hover { color: rgb(0, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:active { color: rgb(0, 0, 0); }
@@ -803,6 +823,7 @@ display: none;
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph { color: rgb(5, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column { background-color: rgb(242, 242, 242); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a { color: rgb(127, 110, 84); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:hover { color: rgb(0, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:active { color: rgb(0, 0, 0); }
@@ -817,6 +838,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 7.684rem; position: absolute; top: 0rem; left: 0.244rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading { background-color: rgb(240, 242, 245); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:active { color: rgb(0, 0, 0); }
@@ -849,6 +871,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 12.964rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading { background-color: rgb(243, 241, 241); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:active { color: rgb(0, 0, 0); }
@@ -880,6 +903,7 @@ display: none;
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .decoration.separator { color: rgb(248, 179, 0); }
+#u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a { color: rgb(127, 110, 84); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:hover { color: rgb(0, 0, 0); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:active { color: rgb(0, 0, 0); }
@@ -901,6 +925,7 @@ display: none;
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed { background-color: rgb(242, 242, 242); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a { color: rgb(127, 110, 84); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:hover { color: rgb(0, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:active { color: rgb(0, 0, 0); }
@@ -921,6 +946,7 @@ display: none;
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a { color: rgb(127, 110, 84); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:hover { color: rgb(0, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:active { color: rgb(0, 0, 0); }
@@ -933,6 +959,7 @@ display: none;
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph { color: rgb(5, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column { background-color: rgb(242, 242, 242); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a { color: rgb(127, 110, 84); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:hover { color: rgb(0, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:active { color: rgb(0, 0, 0); }
@@ -947,6 +974,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline{font-size: 0.244rem; line-height: 0.324rem; width: 11.524rem; position: absolute; top: 0rem; left: 0.364rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading { background-color: rgb(240, 242, 245); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:active { color: rgb(0, 0, 0); }
@@ -979,6 +1007,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading { background-color: rgb(243, 241, 241); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:active { color: rgb(0, 0, 0); }
@@ -1010,6 +1039,7 @@ display: none;
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .decoration.separator { color: rgb(248, 179, 0); }
+#u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a { color: rgb(127, 110, 84); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:hover { color: rgb(0, 0, 0); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:active { color: rgb(0, 0, 0); }
@@ -1031,6 +1061,7 @@ display: none;
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed { background-color: rgb(242, 242, 242); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a { color: rgb(127, 110, 84); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:hover { color: rgb(0, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:active { color: rgb(0, 0, 0); }
@@ -1051,6 +1082,7 @@ display: none;
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a { color: rgb(127, 110, 84); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:hover { color: rgb(0, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:active { color: rgb(0, 0, 0); }
@@ -1063,6 +1095,7 @@ display: none;
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph { color: rgb(5, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column { background-color: rgb(242, 242, 242); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a { color: rgb(127, 110, 84); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:hover { color: rgb(0, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:active { color: rgb(0, 0, 0); }
@@ -1077,6 +1110,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline{font-size: 0.304rem; line-height: 0.394rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading { background-color: rgb(240, 242, 245); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:active { color: rgb(0, 0, 0); }
@@ -1109,6 +1143,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 16.204rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav .group.heading { background-color: rgb(243, 241, 241); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav#u-8613f8b2-f55e-4170-afed-718b9cb419c5-nav a:active { color: rgb(0, 0, 0); }
@@ -1140,6 +1175,7 @@ display: none;
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed > .decoration.separator { color: rgb(248, 179, 0); }
+#u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a { color: rgb(127, 110, 84); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:hover { color: rgb(0, 0, 0); }
 #u-e9de179f-1fd7-41d8-9659-259e6fb83e07#u-e9de179f-1fd7-41d8-9659-259e6fb83e07 a:active { color: rgb(0, 0, 0); }
@@ -1161,6 +1197,7 @@ display: none;
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b .group.mixed { background-color: rgb(242, 242, 242); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a { color: rgb(127, 110, 84); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:hover { color: rgb(0, 0, 0); }
 #u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b#u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b a:active { color: rgb(0, 0, 0); }
@@ -1181,6 +1218,7 @@ display: none;
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph { color: rgb(5, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 .group.mixed { background-color: rgb(242, 242, 242); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a { color: rgb(127, 110, 84); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:hover { color: rgb(0, 0, 0); }
 #u-b025ed41-b428-41e2-8112-2d9f7bd81036#u-b025ed41-b428-41e2-8112-2d9f7bd81036 a:active { color: rgb(0, 0, 0); }
@@ -1193,6 +1231,7 @@ display: none;
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph { color: rgb(5, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a { color: rgb(210, 174, 85); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column > .text.paragraph a:hover { color: rgb(146, 144, 144); }
+#u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 .group.column { background-color: rgb(242, 242, 242); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a { color: rgb(127, 110, 84); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:hover { color: rgb(0, 0, 0); }
 #u-a6857c42-6e03-4984-ba1c-4d4b69022092#u-a6857c42-6e03-4984-ba1c-4d4b69022092 a:active { color: rgb(0, 0, 0); }
@@ -1207,6 +1246,7 @@ display: none;
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline{font-size: 0.234rem; line-height: 0.304rem; width: 14.404rem; position: absolute; top: 0rem; left: 0.454rem;}
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline { color: rgb(0, 102, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading > .title.headline a:hover { color: rgb(0, 105, 0); }
+#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate .group.heading { background-color: rgb(240, 242, 245); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a { color: rgb(77, 150, 193); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:hover { color: rgb(0, 0, 0); }
 #u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate#u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate a:active { color: rgb(0, 0, 0); }
@@ -1238,13 +1278,13 @@ display: none;
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-e9de179f-1fd7-41d8-9659-259e6fb83e07-g-mixed-t-paragraph"><p><span class="first-letter">A</span> <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>popular trip for those wanting to encounter <wbr class="w480 w960"></wbr>majestic waterfalls, an inspiring <wbr class="w481 w961 w1799"></wbr>gorge, <wbr class="w480 w960"></wbr>fascinating ghost-<wbr class="w1800"></wbr>town history and expansive bridges <wbr class="w480 w960"></wbr>all in one trail.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>S</span>tarting our journey at the Santa Rosa Rd Parking lot, <wbr class="w480 w960"></wbr>encounter three historical <wbr class="w481 w961 w1799"></wbr>transportation routes.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>T</span>he old Cascade Highway which connected HWY 3 to <wbr class="w480 w960"></wbr>Rossland until 1962, the <wbr class="w481 w961 w1799"></wbr>Columbia & Western Rail <wbr class="w1800"></wbr>Trail <wbr class="w480 w960"></wbr>built in 1899 and the oldest, the Dewdney Trail <wbr class="w1799"></wbr>from <wbr class="w480 w481 w960 w961"></wbr>1865.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>F</span>rom here travel south/west where the valley opens up <wbr class="w480 w960"></wbr>below and follow the <wbr class="w1799"></wbr>train <wbr class="w481 w961"></wbr>grade along the scenic <wbr class="w480 w960 w1800"></wbr>mountain side.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>round the corner is the Kettle River Bridge, the longest <wbr class="w480 w960"></wbr>to cross this river at 505 <wbr class="w481 w961 w1799"></wbr>feet, a mere fraction of <wbr class="w1800"></wbr>what <wbr class="w480 w960"></wbr>was once a majestic 1600 foot wooden trestle <wbr class="w1799"></wbr>bridge <wbr class="w480 w481 w960 w961"></wbr>from 1899 until 1912.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span> great place to stop and take photos, enjoy the 360 <wbr class="w480 w960"></wbr>degree view or venture <wbr class="w1799"></wbr>down <wbr class="w481 w961"></wbr>the stairs to the sandy <wbr class="w480 w960 w1800"></wbr>beach below.</p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-e9de179f-1fd7-41d8-9659-259e6fb83e07-g-mixed-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
+</div><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-e9de179f-1fd7-41d8-9659-259e6fb83e07-g-mixed-t-paragraph"><p><span class="first-letter">A</span> <wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>popular trip for those wanting to encounter <wbr class="w480 w960"></wbr>majestic waterfalls, an inspiring <wbr class="w481 w961 w1799"></wbr>gorge, <wbr class="w480 w960"></wbr>fascinating ghost-<wbr class="w1800"></wbr>town history and expansive bridges <wbr class="w480 w960"></wbr>all in one trail.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">S</span>tarting our journey at the Santa Rosa Rd Parking lot, <wbr class="w480 w960"></wbr>encounter three historical <wbr class="w481 w961 w1799"></wbr>transportation routes.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">T</span>he old Cascade Highway which connected HWY 3 to <wbr class="w480 w960"></wbr>Rossland until 1962, the <wbr class="w481 w961 w1799"></wbr>Columbia & Western Rail <wbr class="w1800"></wbr>Trail <wbr class="w480 w960"></wbr>built in 1899 and the oldest, the Dewdney Trail <wbr class="w1799"></wbr>from <wbr class="w480 w481 w960 w961"></wbr>1865.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">F</span>rom here travel south/west where the valley opens up <wbr class="w480 w960"></wbr>below and follow the <wbr class="w1799"></wbr>train <wbr class="w481 w961"></wbr>grade along the scenic <wbr class="w480 w960 w1800"></wbr>mountain side.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>round the corner is the Kettle River Bridge, the longest <wbr class="w480 w960"></wbr>to cross this river at 505 <wbr class="w481 w961 w1799"></wbr>feet, a mere fraction of <wbr class="w1800"></wbr>what <wbr class="w480 w960"></wbr>was once a majestic 1600 foot wooden trestle <wbr class="w1799"></wbr>bridge <wbr class="w480 w481 w960 w961"></wbr>from 1899 until 1912.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span> great place to stop and take photos, enjoy the 360 <wbr class="w480 w960"></wbr>degree view or venture <wbr class="w1799"></wbr>down <wbr class="w481 w961"></wbr>the stairs to the sandy <wbr class="w480 w960 w1800"></wbr>beach below.</p></div><div kind="decoration" index="separator" class="decoration separator decoration separator svg" id="u-e9de179f-1fd7-41d8-9659-259e6fb83e07-g-mixed-d-separator-mobile"><?xml version="1.0" encoding="utf-8"?>
 
 <svg preserveAspectRatio="none" id="u-e9de179f-1fd7-41d8-9659-259e6fb83e07-g-mixed-d-separator-mobile-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">
 <path fill="#808285" d="M36,2.3L0.3,64.7h71.4L36,2.3z M36,8.3l30.6,53.4H5.4L36,8.3z"/>
 </svg>
-</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="3d0b6c75-4ed7-4316-a5ec-56746cdcf82b" itemtype="text" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b"><div kind="group" index="mixed" class="group mixed group mixed" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="825" max-height="510" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/15fbc1be18c64640a3d1d0462137ed41664b7365.jpg" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed-m-cover"><picture id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/fdab21a6c158659cf520c983875c0870/insta_brannan.jpg?height=445&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/d13500faebc01ce7c4a82167e88f4811/insta_brannan.jpg?height=446&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/be16c19386ca3a5de1b695b31793ab85/insta_brannan.jpg?height=238&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/28164067f959fb0906e3438e9bf35f6a/insta_brannan.jpg?height=476&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=770 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9c2c9768bf89c98891d1bb1428a4ec09/insta_brannan.jpg?height=357&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/be16c19386ca3a5de1b695b31793ab85/insta_brannan.jpg?height=238&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/28164067f959fb0906e3438e9bf35f6a/insta_brannan.jpg?height=476&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=770 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9c2c9768bf89c98891d1bb1428a4ec09/insta_brannan.jpg?height=357&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed-t-paragraph"><p><span class="first-letter">C</span>ontinue along through the ghost of Cascade City, <wbr class="w480 w960"></wbr>founded in 1896, and at one <wbr class="w481 w961 w1799"></wbr>time boasting 14 hotels, <wbr class="w480 w960 w1800"></wbr>numerous brothels and even a scandalous tobacco <wbr class="w480 w481 w960 w961 w1799"></wbr>robbery!</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>A</span>fter 2 major fires in 1899 and 1901 the city slowly <wbr class="w480 w960"></wbr>declined, but not before <wbr class="w481 w961 w1799"></wbr>leaving a colorful mark on <wbr class="w480 w960 w1800"></wbr>Christina Lake history.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>F</span>urther up and just a few minutes off of the Trans <wbr class="w480 w960"></wbr>Canada Trail is the stunning <wbr class="w481 w961 w1799"></wbr>Cascade Falls making its <wbr class="w480 w960 w1800"></wbr>grand entrance from the Cascade Gorge.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>O</span>riginally known as Coyote Canyon, this area was an <wbr class="w480 w960"></wbr>important fishing ground to <wbr class="w481 w961 w1799"></wbr>the Sinixt, Sanpoil, <wbr class="w480 w960 w1800"></wbr>Okanagan and other first nation tribes.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>M</span>ultiple vantage points provide great (and dangerous) <wbr class="w480 w960"></wbr>views of the powerful <wbr class="w481 w1799"></wbr>falls.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>F</span>or thousands of years the river waters have carved <wbr class="w480 w960"></wbr>smooth the granite walls <wbr class="w481 w961 w1799"></wbr>catching small rocks along <wbr class="w480 w960 w1800"></wbr>the way making hundreds of potholes, also referred to <wbr class="w480 w481 w960 w961 w1799"></wbr>as &#x2018;kettles&#x2019;, leaving some to suggest the origin of the <wbr class="w480 w960 w1800"></wbr>Kettle River&#x2019;s name.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="b025ed41-b428-41e2-8112-2d9f7bd81036" itemtype="text" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036"><div kind="group" index="mixed" class="group mixed group mixed" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1280" max-height="720" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/bfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed-m-cover"><picture id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0768a9d80355c23ba75f3303ad82c19a/insta_brannan.jpg?height=405&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/026dbbb638476ed26a9b9c3eaba51644/insta_brannan.jpg?height=720&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1280 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0768a9d80355c23ba75f3303ad82c19a/insta_brannan.jpg?height=405&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/026dbbb638476ed26a9b9c3eaba51644/insta_brannan.jpg?height=720&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1280 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/108ce31daace9bc4609e0f183a8f8e94/insta_brannan.jpg?height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/092a5fe53c5b3da0f64aee369ef27efb/insta_brannan.jpg?height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=770 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/8a0fe38111627b1101f82db20ecfc8b7/insta_brannan.jpg?height=325&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3247af2b5b78353ab0ad74d58499eb4d/insta_brannan.jpg?height=650&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1154 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2ad7c3fd570bf093e2c8299d246a097c/insta_brannan.jpg?height=216&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5281014e90475e08780e8f6cbb00f132/insta_brannan.jpg?height=432&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/1ef19301023eb52666e6380ba571efdd/insta_brannan.jpg?height=324&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e86645be3b27da6870d33cfcbdaa37ef/insta_brannan.jpg?height=648&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1152 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed-t-paragraph"><p><span class="first-letter">S</span>o powerful and enticing are these waters that a <wbr class="w480 w960"></wbr>hydro-electric dam and power <wbr class="w481 w961 w1799"></wbr>station were built in <wbr class="w480 w960"></wbr>1898, <wbr class="w1800"></wbr>providing the much needed electrical needs of <wbr class="w480 w960"></wbr>the <wbr class="w481 w961 w1799"></wbr>booming mining and lumber industries.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>I</span>t closed operations in 1910, and was dismantled in <wbr class="w480 w960"></wbr>1922. A few artifacts of the <wbr class="w481 w961 w1799"></wbr>history can be found <wbr class="w480 w960 w1800"></wbr>including an impressive 450 foot tunnel, remains of <wbr class="w480 w960"></wbr>the <wbr class="w481 w961 w1799"></wbr>penstock gates and the powerhouse foundation.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>E</span>nding our adventure we find ourselves atop a second <wbr class="w480 w960"></wbr>bridge, this one spanning <wbr class="w481 w961 w1799"></wbr>the Cascade Gorge, <wbr class="w480 w960 w1800"></wbr>providing many more photo opportunities. A popular <wbr class="w480 w960 w1799"></wbr>summer <wbr class="w481 w961"></wbr>spot for locals, this stunning cut is a reminder <wbr class="w480 w960 w1800"></wbr>of the power of nature.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>W</span>hile the Santa Rosa to Cascade part of the Trans <wbr class="w480 w960"></wbr>Canada Trail can easily be <wbr class="w481 w961 w1799"></wbr>hiked in a part of a day &#x2013; <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>adventures throughout and off the trail can take <wbr class="w480 w481 w960 w961 w1799"></wbr>DAYS to explore.</p><p><span class="first-letter"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>S</span>o go out and walk, hike or bike in the footsteps of <wbr class="w480 w960"></wbr>pioneers from centuries gone <wbr class="w481 w961 w1799"></wbr>by, who&#x2019;s dreams built <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>city, railway, roads, trails, bridges, dam and power-<wbr class="w480 w960 w1799"></wbr>plant.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_short_paragraph w_short_text stack column" itemid="a6857c42-6e03-4984-ba1c-4d4b69022092" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-a6857c42-6e03-4984-ba1c-4d4b69022092"><div kind="group" index="column" class="group column group column" id="u-a6857c42-6e03-4984-ba1c-4d4b69022092-g-column"><div kind="text" index="paragraph" class="text-decoration short short_paragraph short_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-a6857c42-6e03-4984-ba1c-4d4b69022092-g-column-t-paragraph"><p><span class="first-letter">S</span>ee the beauty of what attracted them to this unique <wbr class="w480 w960"></wbr>area and discover that it&#x2019;s <wbr class="w481 w961 w1799"></wbr>exactly what brought you <wbr class="w480 w960 w1800"></wbr>here as well.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline-a">Christina Lake feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text media_lt_wide w_short_paragraph w_short_text layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-3-l-one"></div><style id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-color">body{background-color: rgba(248, 249, 250, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text media_lt_wide w_short_paragraph w_short_text layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-3-l-one"></div><style id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-color">body{background-color: rgba(248, 249, 250, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+</div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_lt_wide media_lt_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="3d0b6c75-4ed7-4316-a5ec-56746cdcf82b" itemtype="text" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b"><div kind="group" index="mixed" class="group mixed group mixed" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="825" max-height="510" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/15fbc1be18c64640a3d1d0462137ed41664b7365.jpg" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed-m-cover"><picture id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/fdab21a6c158659cf520c983875c0870/insta_brannan.jpg?height=445&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/d13500faebc01ce7c4a82167e88f4811/insta_brannan.jpg?height=446&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/be16c19386ca3a5de1b695b31793ab85/insta_brannan.jpg?height=238&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/28164067f959fb0906e3438e9bf35f6a/insta_brannan.jpg?height=476&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=770 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9c2c9768bf89c98891d1bb1428a4ec09/insta_brannan.jpg?height=357&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/be16c19386ca3a5de1b695b31793ab85/insta_brannan.jpg?height=238&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/28164067f959fb0906e3438e9bf35f6a/insta_brannan.jpg?height=476&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=770 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/9c2c9768bf89c98891d1bb1428a4ec09/insta_brannan.jpg?height=357&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/bfc904a471c3d361e9f4788068f8ba51/insta_brannan.jpg?height=510&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2F15fbc1be18c64640a3d1d0462137ed41664b7365.jpg&width=825 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-3d0b6c75-4ed7-4316-a5ec-56746cdcf82b-g-mixed-t-paragraph"><p><span class="first-letter">C</span>ontinue along through the ghost of Cascade City, <wbr class="w480 w960"></wbr>founded in 1896, and at one <wbr class="w481 w961 w1799"></wbr>time boasting 14 hotels, <wbr class="w480 w960 w1800"></wbr>numerous brothels and even a scandalous tobacco <wbr class="w480 w481 w960 w961 w1799"></wbr>robbery!</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">A</span>fter 2 major fires in 1899 and 1901 the city slowly <wbr class="w480 w960"></wbr>declined, but not before <wbr class="w481 w961 w1799"></wbr>leaving a colorful mark on <wbr class="w480 w960 w1800"></wbr>Christina Lake history.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">F</span>urther up and just a few minutes off of the Trans <wbr class="w480 w960"></wbr>Canada Trail is the stunning <wbr class="w481 w961 w1799"></wbr>Cascade Falls making its <wbr class="w480 w960 w1800"></wbr>grand entrance from the Cascade Gorge.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">O</span>riginally known as Coyote Canyon, this area was an <wbr class="w480 w960"></wbr>important fishing ground to <wbr class="w481 w961 w1799"></wbr>the Sinixt, Sanpoil, <wbr class="w480 w960 w1800"></wbr>Okanagan and other first nation tribes.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">M</span>ultiple vantage points provide great (and dangerous) <wbr class="w480 w960"></wbr>views of the powerful <wbr class="w481 w1799"></wbr>falls.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">F</span>or thousands of years the river waters have carved <wbr class="w480 w960"></wbr>smooth the granite walls <wbr class="w481 w961 w1799"></wbr>catching small rocks along <wbr class="w480 w960 w1800"></wbr>the way making hundreds of potholes, also referred to <wbr class="w480 w481 w960 w961 w1799"></wbr>as &#x2018;kettles&#x2019;, leaving some to suggest the origin of the <wbr class="w480 w960 w1800"></wbr>Kettle River&#x2019;s name.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full aspect_natural line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack mixed i w_cover w_media w_paragraph w_text w_decoration media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_long_paragraph w_long_text stack mixed" itemid="b025ed41-b428-41e2-8112-2d9f7bd81036" itemtype="text" diff_index="0" index="mixed" kind="stack" score="3.625" missed="0.375" tag="article" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036"><div kind="group" index="mixed" class="group mixed group mixed" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed"><a kind="media" index="cover" class="vfld media cover vfld-trailer media cover" specificity="0.25" itemprop="cover" max-width="1280" max-height="720" href="https://s3-us-west-2.amazonaws.com/the-grid-img/p/bfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed-m-cover"><picture id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed-m-cover-img" class=""><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0768a9d80355c23ba75f3303ad82c19a/insta_brannan.jpg?height=405&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/026dbbb638476ed26a9b9c3eaba51644/insta_brannan.jpg?height=720&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1280 2x" media="(min-width: 1441px) and (min-width: 1441px) and (max-width: 1799px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/0768a9d80355c23ba75f3303ad82c19a/insta_brannan.jpg?height=405&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=720, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/026dbbb638476ed26a9b9c3eaba51644/insta_brannan.jpg?height=720&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1280 2x" media="(min-width: 1441px) and (min-width: 1800px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/108ce31daace9bc4609e0f183a8f8e94/insta_brannan.jpg?height=217&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=385, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/092a5fe53c5b3da0f64aee369ef27efb/insta_brannan.jpg?height=434&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=770 2x" media="(min-width: 721px) and (min-width: 721px) and (max-width: 960px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/8a0fe38111627b1101f82db20ecfc8b7/insta_brannan.jpg?height=325&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=577, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/3247af2b5b78353ab0ad74d58499eb4d/insta_brannan.jpg?height=650&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1154 2x" media="(min-width: 721px) and (min-width: 961px) and (max-width: 1440px)" /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/2ad7c3fd570bf093e2c8299d246a097c/insta_brannan.jpg?height=216&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=384, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/5281014e90475e08780e8f6cbb00f132/insta_brannan.jpg?height=432&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=768 2x" media="(min-width: 1px) and (max-width: 480px) " /><source srcset="https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/1ef19301023eb52666e6380ba571efdd/insta_brannan.jpg?height=324&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=576, https://imgflo.herokuapp.com/graph/vahj1ThiexotieMo/e86645be3b27da6870d33cfcbdaa37ef/insta_brannan.jpg?height=648&input=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fthe-grid-img%2Fp%2Fbfce3162a54cf4d5905bde262ac00cfe6982a93a.jpg&width=1152 2x" media="(min-width: 1px) and (min-width: 481px) and (max-width: 720px)" /><!--[if IE 9]></video><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="  /></picture></a><div kind="text" index="paragraph" class="text-decoration long long_paragraph long_text text paragraph vfld-leader text paragraph" specificity="0.25" itemprop="text" id="u-b025ed41-b428-41e2-8112-2d9f7bd81036-g-mixed-t-paragraph"><p><span class="first-letter">S</span>o powerful and enticing are these waters that a <wbr class="w480 w960"></wbr>hydro-electric dam and power <wbr class="w481 w961 w1799"></wbr>station were built in <wbr class="w480 w960"></wbr>1898, <wbr class="w1800"></wbr>providing the much needed electrical needs of <wbr class="w480 w960"></wbr>the <wbr class="w481 w961 w1799"></wbr>booming mining and lumber industries.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">I</span>t closed operations in 1910, and was dismantled in <wbr class="w480 w960"></wbr>1922. A few artifacts of the <wbr class="w481 w961 w1799"></wbr>history can be found <wbr class="w480 w960 w1800"></wbr>including an impressive 450 foot tunnel, remains of <wbr class="w480 w960"></wbr>the <wbr class="w481 w961 w1799"></wbr>penstock gates and the powerhouse foundation.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">E</span>nding our adventure we find ourselves atop a second <wbr class="w480 w960"></wbr>bridge, this one spanning <wbr class="w481 w961 w1799"></wbr>the Cascade Gorge, <wbr class="w480 w960 w1800"></wbr>providing many more photo opportunities. A popular <wbr class="w480 w960 w1799"></wbr>summer <wbr class="w481 w961"></wbr>spot for locals, this stunning cut is a reminder <wbr class="w480 w960 w1800"></wbr>of the power of nature.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">W</span>hile the Santa Rosa to Cascade part of the Trans <wbr class="w480 w960"></wbr>Canada Trail can easily be <wbr class="w481 w961 w1799"></wbr>hiked in a part of a day &#x2013; <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>adventures throughout and off the trail can take <wbr class="w480 w481 w960 w961 w1799"></wbr>DAYS to explore.</p><wbr class="w480"></wbr><wbr class="w481"></wbr><wbr class="w960"></wbr><wbr class="w961"></wbr><wbr class="w1799"></wbr><wbr class="w1800"></wbr><p><span class="first-letter">S</span>o go out and walk, hike or bike in the footsteps of <wbr class="w480 w960"></wbr>pioneers from centuries gone <wbr class="w481 w961 w1799"></wbr>by, who&#x2019;s dreams built <wbr class="w480 w960"></wbr>the <wbr class="w1800"></wbr>city, railway, roads, trails, bridges, dam and power-<wbr class="w480 w960 w1799"></wbr>plant.</p></div></div></article><article subject="chapter" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_stretch uninverted vertical collapsed full line_padding_aside_inside text_width_wider group_h_align_center text_align_left flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_article chapter stack column i last_chapter w_paragraph w_text w_short_paragraph w_short_text stack column" itemid="a6857c42-6e03-4984-ba1c-4d4b69022092" itemtype="text" diff_index="1" index="column" kind="stack" score="0.625" missed="0.375" tag="article" id="u-a6857c42-6e03-4984-ba1c-4d4b69022092"><div kind="group" index="column" class="group column group column" id="u-a6857c42-6e03-4984-ba1c-4d4b69022092-g-column"><div kind="text" index="paragraph" class="text-decoration short short_paragraph short_text text paragraph vfld-leader vfld-trailer text paragraph" specificity="0.25" itemprop="text" id="u-a6857c42-6e03-4984-ba1c-4d4b69022092-g-column-t-paragraph"><p><span class="first-letter">S</span>ee the beauty of what attracted them to this unique <wbr class="w480 w960"></wbr>area and discover that it&#x2019;s <wbr class="w481 w961 w1799"></wbr>exactly what brought you <wbr class="w480 w960 w1800"></wbr>here as well.</p></div></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline"><a class="text-decoration" href="../rss.xml" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-alternate-g-heading-t-headline-a">Christina Lake feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text media_lt_wide w_short_paragraph w_short_text layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-desktop-l-one-3-l-one"></div><style id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-color">body{background-color: rgba(248, 249, 250, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="article" diff_index="0" index="one" class="layout one i w_cover w_media w_headline w_title w_paragraph w_text w_separator w_decoration w_leader w_trailer media_gte_narrow media_gte_half media_gte_wide media_lt_full media_landscape crop_true w_short_headline w_short_title w_long_paragraph w_long_text media_lt_wide w_short_paragraph w_short_text layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_texts colors-use-same-as-previous layout one i first_layout last_layout article layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-cinema-l-one-3-l-one"></div><style id="u-8613f8b2-f55e-4170-afed-718b9cb419c5-color">body{background-color: rgba(248, 249, 250, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1648,7 +1688,7 @@ module.exports = function() {
 
 
 },{}],5:[function(require,module,exports){
-var cache, fade, frames, hiding, highlighting, showing;
+var Hide, Show, cache, fade, frames, hiding, highlighting, showing;
 
 highlighting = showing = hiding = null;
 
@@ -1675,40 +1715,69 @@ fade = function(element, to, from) {
   return frames[element.id] = requestAnimationFrame(Frame);
 };
 
+document.body.addEventListener('mousemove', function(e) {});
+
+Hide = function(target) {
+  clearTimeout(showing);
+  setTimeout(function() {
+    if (hiding !== target) {
+      hiding.style.backgroundImage = cache[hiding.id];
+      return delete cache[hiding.id];
+    }
+  }, 300);
+  hiding = highlighting;
+  highlighting = null;
+  return fade(hiding.getElementsByTagName('img')[0], 1);
+};
+
+Show = function(target, x, y, img) {
+  var colors, value;
+  if (target !== highlighting) {
+    clearTimeout(showing);
+    showing = setTimeout(function() {
+      if (highlighting === target) {
+        return fade(img, 0.8);
+      }
+    }, 150);
+  }
+  if ((value = cache[target.id]) == null) {
+    cache[target.id] = value = window.getComputedStyle(target)['background-image'];
+  }
+  if (value.indexOf('linear-gradient') > -1) {
+    colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
+    if (colors[1].indexOf('rgba') > -1) {
+      colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
+    } else {
+      colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
+    }
+    value = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
+  } else {
+    return;
+  }
+  target.style.backgroundImage = value;
+  return highlighting = target;
+};
+
+document.body.addEventListener('click', function(e) {
+  if (highlighting) {
+    return Hide(highlighting);
+  }
+});
+
 document.body.addEventListener('mousemove', function(e) {
-  var clientX, clientY, colors, img, parent, ref, target, value;
+  var clientX, clientY, img, parent, ref, target;
   target = e.target;
   while (target) {
-    if (target.tagName === 'A' && target.classList.contains('media')) {
+    if (target.tagName === 'A' && target.classList.contains('media') && !target.classList.contains('revealed')) {
       break;
     }
     target = target.parentNode;
   }
   if (highlighting && highlighting !== target) {
-    clearTimeout(showing);
-    setTimeout(function() {
-      if (hiding !== target) {
-        hiding.style.backgroundImage = cache[hiding.id];
-        return delete cache[hiding.id];
-      }
-    }, 300);
-    hiding = highlighting;
-    highlighting = null;
-    fade(hiding.getElementsByTagName('img')[0], 1);
+    Hide(highlighting);
   }
   if (target) {
     if ((ref = (img = target.getElementsByTagName('img')[0])) != null ? ref.complete : void 0) {
-      if (target !== highlighting) {
-        clearTimeout(showing);
-        showing = setTimeout(function() {
-          if (highlighting === target) {
-            return fade(img, 0.8);
-          }
-        }, 150);
-      }
-      if ((value = cache[target.id]) == null) {
-        cache[target.id] = value = window.getComputedStyle(target)['background-image'];
-      }
       clientX = e.pageX;
       clientY = e.pageY;
       parent = target;
@@ -1717,19 +1786,7 @@ document.body.addEventListener('mousemove', function(e) {
         clientY -= parent.offsetTop;
         parent = parent.offsetParent;
       }
-      if (value.indexOf('linear-gradient') > -1) {
-        colors = value.match(/rgba?\((.*?)\)|black|white|transparent/g);
-        if (colors[1].indexOf('rgba') > -1) {
-          colors[1] = colors[1].replace(/,\s*[\d\.]+\)/, ', 0.7)');
-        } else {
-          colors[1] = colors[1].replace('rgb', 'rgba').replace(/\)/, ', 0.7)');
-        }
-        value = 'radial-gradient(circle at ' + clientX + 'px ' + clientY + 'px, rgba(255,255,255,0.5) -10%, ' + colors[1] + ' 25%, ' + colors[0] + ' 90%)';
-      } else {
-        return;
-      }
-      target.style.backgroundImage = value;
-      return highlighting = target;
+      return Show(target, clientX, clientY, img);
     }
   }
 });
@@ -1877,11 +1934,13 @@ module.exports = function() {
 
 
 },{"./reflow":9}],8:[function(require,module,exports){
-var Player, Youtube, iframe, revealed, rgb2hex;
+var Player, Youtube, iframe, reflow, revealed, rgb2hex;
 
 iframe = null;
 
 Youtube = null;
+
+reflow = require('./reflow');
 
 Player = function(id, src, width, height, color, bg) {
   if (src.indexOf('youtube') > -1) {
@@ -1890,6 +1949,8 @@ Player = function(id, src, width, height, color, bg) {
   src = src.replace('COLOR', color).replace('BG', bg);
   if (location.protocol !== 'https:') {
     src = src.replace('https:', 'http:');
+  } else {
+    src = src.replace('http:', 'https:');
   }
   iframe = document.createElement('iframe');
   iframe.id = id;
@@ -1902,79 +1963,294 @@ Player = function(id, src, width, height, color, bg) {
   iframe.style.left = 0;
   iframe.style.right = 0;
   iframe.style.position = 'absolute';
-  iframe.style.opacity = 0.2;
+  iframe.style.opacity = 0;
   iframe.onload = function() {
-    return iframe.style.opacity = 1;
+    return iframe.showing = setTimeout(function() {
+      iframe.classList.add('loaded');
+      iframe.style.display = '';
+      iframe.showing = setTimeout(function() {
+        iframe.style.opacity = 1;
+        return iframe.showing = setTimeout(function() {
+          return typeof iframe.onloaded === "function" ? iframe.onloaded(true) : void 0;
+        }, 500);
+      }, 1);
+      return typeof iframe.onloaded === "function" ? iframe.onloaded() : void 0;
+    }, 300);
   };
   return iframe;
 };
 
 revealed = null;
 
-Player.reveal = function(iframe) {
-  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
-  while (target = (target || iframe).parentNode) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (target.parentNode.classList.contains('group')) {
-        parent = target.parentNode;
-      } else {
-        parent = target;
+Player.findMedia = function(iframe) {
+  var i, len, media, ref, ref1, ref2, sibling;
+  if (iframe.parentNode) {
+    ref = iframe.parentNode.childNodes;
+    for (i = 0, len = ref.length; i < len; i++) {
+      sibling = ref[i];
+      if ((ref1 = sibling.classList) != null ? ref1.contains('media') : void 0) {
+        return sibling;
       }
-      revealed = iframe;
-      play = parent.getElementsByClassName('play')[0];
-      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
-      top = -play.offsetTop;
-      play.style.webkitTransformOrigin = 'top right';
-      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
-      target.classList.add('revealed');
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        if (sibling.nodeType === 1 && sibling !== parent) {
-          translateX = translateY = null;
-          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
-            translateX = -diff;
-          }
-          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
-            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
-              translateX = diff;
-            }
-          }
-          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
-            translateY = -diff;
-          }
-          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
-            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
-              translateY = diff;
-            }
-          }
-          if (Math.abs(translateX) > Math.abs(translateY)) {
-            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
-          } else {
-            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
-          }
-          console.log(translateX, translateY, sibling);
-        }
+    }
+    while (media = (media || iframe).parentNode) {
+      if ((ref2 = media.classList) != null ? ref2.contains('media') : void 0) {
+        return media;
       }
     }
   }
 };
 
+Player.getClipRect = function(img, media) {
+  var rect;
+  rect = {};
+  rect.left = -img.offsetLeft;
+  rect.right = -img.offsetLeft + img.parentNode.offsetWidth;
+  rect.top = -img.offsetTop;
+  rect.bottom = img.offsetTop + img.parentNode.offsetHeight;
+  return rect;
+};
+
+Player.rect = function(rect) {
+  return 'rect(' + rect.top + 'px,' + rect.right + 'px,' + rect.bottom + 'px,' + rect.left + 'px)';
+};
+
+Player.set = function(element, property, value) {
+  var webkit;
+  webkit = 'webkit' + property.charAt(0).toUpperCase() + property.substring(1);
+  if (element.style[webkit] != null) {
+    return element.style[webkit] = value;
+  } else {
+    return element.style[property] = value;
+  }
+};
+
+Player.reveal = function(iframe, instant) {
+  var firstTime, img, layout, left, media, offsetLeft, offsetTop, parent, play, ratio, rectLeft, rectRight, ref, root, shiftLeft, stack, targetHeight, targetWidth, top, translateX, translateY, zoom;
+  iframe.style.maxHeight = window.innerHeight + 'px';
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      root = stack = media;
+      while (root = root.parentNode) {
+        if (root.classList.contains('stack')) {
+          stack = root;
+        }
+        if (root.classList.contains('layout-system')) {
+          break;
+        }
+      }
+      layout = reflow.getLayout(root, stack);
+      console.log('get layout', root, stack, layout);
+      img = media.querySelector('picture, img');
+      offsetLeft = media.offsetLeft;
+      offsetTop = media.offsetTop;
+      if (media.parentNode.classList.contains('group')) {
+        parent = media.parentNode;
+        offsetLeft += parent.offsetLeft;
+        offsetTop += parent.offsetTop;
+      } else {
+        parent = media;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      Player.set(play, 'transformOrigin', 'top right');
+      if (!media.classList.contains('revealed')) {
+        firstTime = true;
+        media.classList.add('revealed');
+      }
+      if (layout && (layout.offsetWidth > media.offsetWidth * 2.5 || media.offsetWidth < 350 || media.offsetHeight < 200) && iframe.src.indexOf('soundcloud') === -1) {
+        if (firstTime) {
+          Player.set(img, 'transition', 'none');
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          return requestAnimationFrame(function() {
+            Player.set(img, 'transition', '');
+            return requestAnimationFrame(function() {
+              return Player.reveal(iframe);
+            });
+          });
+        }
+        iframe.style.zIndex = 6;
+        media.classList.add('expanded');
+        translateX = -offsetLeft - stack.offsetLeft;
+        translateY = -offsetTop - stack.offsetTop;
+        if (stack.parentNode !== layout) {
+          translateX += layout.offsetLeft + layout.parentNode.offsetLeft;
+          translateY += layout.offsetTop + layout.parentNode.offsetTop;
+        }
+        Player.set(img, 'transform', img.style.transform = 'translateX(' + (translateX - img.offsetLeft) + 'px) ' + 'translateY(' + (translateY - img.offsetTop) + 'px) ');
+        if (img) {
+          Player.set(media, 'transformOrigin', 'top left');
+          Player.set(img, 'transformOrigin', 'top left');
+          ratio = img.offsetWidth / img.offsetHeight;
+          targetHeight = Math.min(layout.offsetHeight, window.innerHeight);
+          targetWidth = ratio * targetHeight;
+          console.log(layout, layout.offsetHeight, targetHeight, 44444);
+          iframe.style.left = translateX + media.offsetLeft + 'px';
+          iframe.style.top = translateY + media.offsetTop + 'px';
+          iframe.style.width = layout.offsetWidth + 'px';
+          iframe.style.height = layout.offsetHeight + 'px';
+          zoom = targetHeight / img.offsetHeight;
+          shiftLeft = (layout.offsetWidth - targetWidth) / 2;
+          rectLeft = rectRight = Math.max(0, -shiftLeft / zoom);
+          if (media.style.overflow !== 'visible') {
+            requestAnimationFrame(function() {
+              media.style.overflow = 'visible';
+              stack.style.overflow = 'visible';
+              img.style.clip = Player.rect(Player.getClipRect(img));
+              return requestAnimationFrame(function() {
+                return img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+              });
+            });
+          } else {
+            img.style.clip = 'rect(0px, ' + (img.offsetWidth - rectRight) + 'px, ' + img.offsetHeight + 'px, ' + rectLeft + 'px)';
+          }
+          if (img.style.webkitTransform) {
+            img.style.webkitTransform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          } else if (img.style.transform) {
+            img.style.transform += ' translateX(' + shiftLeft + 'px)  scale(' + zoom.toFixed(3) + ') ';
+          }
+          left = translateX + layout.offsetWidth - play.offsetLeft - play.offsetWidth;
+          top = translateY - play.offsetTop;
+          Player.set(play, 'transform', 'translateX(' + (left - 10) + 'px) ' + 'translateY(' + (top + 10) + 'px) ' + 'scale(0.5)');
+        }
+        stack.style.zIndex = 10;
+        if (iframe.style.opacity === 1) {
+          Player.fade(parent, true, media);
+        } else {
+          iframe.onloaded = function(full) {
+            return Player.fade(parent, full, media);
+          };
+        }
+      } else {
+        media.classList.remove('expanded');
+        left = media.offsetWidth - play.offsetLeft - play.offsetWidth;
+        top = -play.offsetTop;
+        Player.set(play, 'transform', 'translateX(' + (left - 5) + 'px) translateY(' + (top + 5) + 'px) scale(0.5)');
+        iframe.style.left = media.offsetLeft + 'px';
+        iframe.style.top = media.offsetTop + 'px';
+        iframe.style.width = media.offsetWidth + 'px';
+        iframe.style.height = media.offsetHeight + 'px';
+        if (iframe.style.opacity === 1) {
+          img.style.opacity = 0;
+        } else {
+          iframe.onloaded = function(full) {
+            console.error('ONLOADED', full);
+            if (full) {
+              return img.style.opacity = 0;
+            } else {
+              return img.style.opacity = 0.8;
+            }
+          };
+        }
+        Player.expose(parent);
+      }
+    }
+  }
+};
+
+Player.fade = function(parent, full, media) {
+  var i, len, ref, results, sibling;
+  if (media) {
+    sibling = media.querySelector('picture, img');
+    if (full) {
+      sibling.style.opacity = 0;
+    }
+  }
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME' && !sibling.classList.contains('play')) {
+      if (full) {
+        results.push(sibling.style.opacity = 0);
+      } else {
+        results.push(sibling.style.opacity = 0.8);
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
+Player.expose = function(parent) {
+  var diff, i, len, ref, results, sibling, translateX, translateY;
+  ref = parent.parentNode.childNodes;
+  results = [];
+  for (i = 0, len = ref.length; i < len; i++) {
+    sibling = ref[i];
+    if (sibling.nodeType === 1 && sibling !== parent && sibling.tagName !== 'IFRAME') {
+      translateX = translateY = null;
+      if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+        translateX = -diff - 2;
+      }
+      if ((diff = parent.offsetLeft + parent.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+        if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+          translateX = diff + 2;
+        }
+      }
+      if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+        translateY = -diff - 2;
+      }
+      if ((diff = parent.offsetTop + parent.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+        if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+          translateY = diff + 2;
+        }
+      }
+      if (Math.abs(translateX) > Math.abs(translateY)) {
+        results.push(Player.set(sibling, 'transform', 'translateY(' + translateY + 'px)'));
+      } else {
+        results.push(Player.set(sibling, 'transform', 'translateX(' + translateX + 'px)'));
+      }
+    } else {
+      results.push(void 0);
+    }
+  }
+  return results;
+};
+
 Player.hide = function(iframe) {
-  var i, len, parent, play, ref, ref1, sibling;
-  while (parent = (parent || iframe).parentNode) {
-    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
-      parent.classList.remove('revealed');
+  var child, i, img, j, len, len1, media, parent, play, ref, ref1, ref2, ref3, sibling;
+  if (media = Player.findMedia(iframe)) {
+    if ((ref = media.classList) != null ? ref.contains('revealed') : void 0) {
+      media.classList.remove('revealed');
+      media.classList.remove('expanded');
+      Player.set(media, 'transform', '');
+      if (img = media.querySelector('picture, img')) {
+        img.style.zIndex = '';
+        img.style.opacity = '';
+        if (media.style.overflow === 'visible') {
+          img.style.clip = Player.rect(Player.getClipRect(img));
+          setTimeout(function() {
+            img.style.clip = '';
+            return media.style.overflow = '';
+          }, 300);
+        }
+      }
+      ref1 = media.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        child = ref1[i];
+        Player.set(child, 'transform', '');
+      }
+      parent = media;
       if (parent.parentNode.classList.contains('group')) {
         parent = parent.parentNode;
       }
       play = parent.getElementsByClassName('play')[0];
-      play.style.webkitTransform = '';
-      ref1 = parent.parentNode.childNodes;
-      for (i = 0, len = ref1.length; i < len; i++) {
-        sibling = ref1[i];
-        sibling.style.webkitTransform = '';
+      play.style.zIndex = '';
+      Player.set(play, 'transform', '');
+      ref2 = parent.parentNode.childNodes;
+      for (j = 0, len1 = ref2.length; j < len1; j++) {
+        sibling = ref2[j];
+        if (sibling.nodeType === 1 && sibling !== iframe) {
+          Player.set(sibling, 'transform', '');
+          sibling.style.opacity = '';
+        }
       }
+      if (!((ref3 = (parent = parent.parentNode).classList) != null ? ref3.contains('stack') : void 0)) {
+        parent = parent.parentNode;
+      }
+      parent.style.zIndex = '';
+      parent.style.visible = '';
     }
   }
   return revealed = null;
@@ -1998,29 +2274,32 @@ Player.stop = function(iframe) {
   var old;
   old = iframe;
   iframe.style.opacity = 0;
+  iframe.style.width = iframe.offsetWidth + 'px';
+  iframe.style.height = iframe.offsetHeight + 'px';
   setTimeout(function() {
     var ref;
     return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
   }, 300);
+  clearTimeout(iframe.showing);
   Player.hide(iframe);
   return iframe = null;
 };
 
 document.addEventListener('click', function(e) {
-  var bg, color, header, parent, play, ref, ref1, results, styles, target;
-  target = e.target;
+  var bg, color, header, media, parent, play, ref, ref1, results, styles;
+  media = e.target;
   results = [];
-  while (target) {
-    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
-      if (play = target.getElementsByClassName('play')[0]) {
-        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+  while (media) {
+    if ((ref = media.classList) != null ? ref.contains('media') : void 0) {
+      if (play = media.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === media || (iframe != null ? iframe.parentNode : void 0) === media.parentNode) {
           Player.stop(iframe);
         } else {
           if (iframe) {
             Player.stop(iframe);
           }
           color = bg = null;
-          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          header = (ref1 = media.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
           parent = header || play;
           while (parent) {
             if (parent.nodeType === 1) {
@@ -2039,14 +2318,14 @@ document.addEventListener('click', function(e) {
             parent = parent.parentNode;
           }
           iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
-          target.appendChild(iframe);
+          media.parentNode.insertBefore(iframe, media);
           Player.reveal(iframe);
         }
         e.preventDefault();
         break;
       }
     }
-    results.push(target = target.parentNode);
+    results.push(media = media.parentNode);
   }
   return results;
 });
@@ -2061,7 +2340,7 @@ rgb2hex = function(rgb) {
 window.exports = window.Player = Player;
 
 
-},{}],9:[function(require,module,exports){
+},{"./reflow":9}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
